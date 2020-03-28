@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="SideBarView" customModule="NotesOrganizer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtE-vW-lRh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" red="0.79261794948824948" green="0.79261794948824948" blue="0.79261794948824948" alpha="0.70320752640845074" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dek-ra-6cN">
+                    <rect key="frame" x="0.0" y="44" width="186.5" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="MdV-2R-vwV"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="5SG-dB-FNj"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="JtE-vW-lRh" secondAttribute="bottom" constant="34" id="0na-ev-NGF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dek-ra-6cN" secondAttribute="bottom" id="4XM-ed-nG3"/>
+                <constraint firstItem="Dek-ra-6cN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="51V-qK-X92"/>
+                <constraint firstItem="JtE-vW-lRh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5OA-7P-MOY"/>
+                <constraint firstItem="Dek-ra-6cN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ugd-4C-4Nm"/>
+                <constraint firstItem="Dek-ra-6cN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.45" id="nOu-TN-1Jq"/>
+                <constraint firstItem="JtE-vW-lRh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="srr-Ec-C33"/>
+                <constraint firstItem="JtE-vW-lRh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="w0y-zK-sXR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backgroundView" destination="JtE-vW-lRh" id="4PL-Yh-Cn3"/>
+                <outlet property="menuTableView" destination="Dek-ra-6cN" id="cW1-yn-gRy"/>
+            </connections>
+            <point key="canvasLocation" x="-804.34782608695662" y="96.428571428571431"/>
+        </view>
+    </objects>
+</document>
